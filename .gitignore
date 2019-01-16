@@ -1,23 +1,26 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
+# OS or Editor folders
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.cache
+.project
+.settings
+.tmproj
+nbproject
+Thumbs.db
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# NPM packages folder.
+node_modules/
+
+# Output folder.
+public/
