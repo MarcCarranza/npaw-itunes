@@ -1,6 +1,5 @@
 import Marionette from 'backbone.marionette';
-import CollectionView from './Test';
-import Header from './Header';
+import CollectionView from './Main';
 
 export default Marionette.Application.extend({
   region: '#app',
