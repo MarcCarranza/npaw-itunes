@@ -1,12 +1,11 @@
 import Marionette from 'backbone.marionette';
-import CollectionView from './CollectionView';
+import CollectionView from './Test';
 import Header from './Header';
 
 export default Marionette.Application.extend({
   region: '#app',
 
   onStart() {
-    this.showView(Header);
-    this.showView(CollectionView);
+    CollectionView.render();
   }
 });
