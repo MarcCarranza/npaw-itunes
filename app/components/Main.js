@@ -11,7 +11,7 @@ const MyView = Mn.View.extend({
   },
   onRender() {
     this.showChildView('header', Header);
-    this.showChildView('albums', Albums);
+    this.showChildView('albums', Albums); 
   }
 });
 const myView = new MyView();

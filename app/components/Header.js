@@ -1,5 +1,5 @@
 import Marionette from 'backbone.marionette';
-import template from '../templates/main.jst';
+import template from '../templates/header.jst';
 
 let Header = Marionette.View.extend({
   template: template
