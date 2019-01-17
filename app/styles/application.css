@@ -24,7 +24,7 @@ body{
 }
 
 .header__wrapper{
-  padding: 0 2rem;
+  padding: 0 4rem;
   min-height: 6rem;
   display: flex;
   justify-content: space-between;
@@ -36,6 +36,16 @@ body{
   display: flex;
   flex: 1;
   align-items: center;
+}
+
+.player__icon {
+  max-height: 2.25rem;
+  margin: 0rem 0.75rem;
+}
+
+.player__icon-volume {
+  max-height: 2.25rem;
+  margin-left: 5rem;
 }
 
 /** Logo **/
@@ -57,13 +67,19 @@ body{
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+}
+
+.search__input {
+  border-radius: 0.35rem;
+  border: 1px solid hsl(0, 0%, 40%);
+  padding: 0.25rem 0.25rem;
 }
 
 /** ALBUMS **/
 
 .albums {
-  margin: 2rem 2rem;
+  margin: 2rem 3rem;
 }
 
 .albums__wrapper {
@@ -74,7 +90,8 @@ body{
 /** Album **/
 
 .album__wrapper {
-  margin: 2rem 0;
+  margin: 2rem 1rem;
+  width: 13rem;
   font-weight: 300;
 }
 

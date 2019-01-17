@@ -3,7 +3,7 @@ import Marionette from 'backbone.marionette';
 import Album from './AlbumView';
 
 let MyCollection = Backbone.Collection.extend({
-  url: 'https://itunes.apple.com/search?term=jack+johnson&limit=25',
+  url: 'https://itunes.apple.com/search?term=jack+johnson&limit=20',
   parse: (data) => {
     return data.results;
   }
