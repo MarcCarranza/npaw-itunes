@@ -1,17 +1,17 @@
 import Mn from 'backbone.marionette';
 import Header from './Header';
-import Albums from './CollectionView';
+import Albums from './AlbumsCollection';
 
 const MyView = Mn.View.extend({
   el: '#container',
   template: false,
   regions: {
-    region1: '#region1',
-    region2: '#region2'
+    header: '#header',
+    albums: '#albums'
   },
   onRender() {
-    this.showChildView('region1', Header);
-    this.showChildView('region2', Albums); // Preferred method for showing child views
+    this.showChildView('header', Header);
+    this.showChildView('albums', Albums);
   }
 });
 const myView = new MyView();

@@ -1,6 +1,6 @@
 import Backbone from 'backbone';
 import Marionette from 'backbone.marionette';
-import item from './ItemView';
+import item from './AlbumView';
 
 let MyCollection = Backbone.Collection.extend({
 
