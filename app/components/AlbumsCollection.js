@@ -3,23 +3,19 @@ import Marionette from 'backbone.marionette';
 import Album from './AlbumView';
 
 let MyCollection = Backbone.Collection.extend({
-  url: 'https://itunes.apple.com/search?term=jack+johnson&limit=25'
+  url: 'https://itunes.apple.com/search?term=jack+johnson&limit=25',
+  parse: (data) => {
+    return data.results;
+  }
 });
 
-function testCall(){
-  $.ajax({
-    url: 'https://itunes.apple.com/search?term=jack+johnson&limit=25',
-    type: 'GET',
-    success: function (data) {
-      console.log('o-kei');
-    },
-    error: function (data) {
-      console.log('error');
-    }
-  })
-}
-
 let apiCollection = new MyCollection();
+apiCollection.fetch({
+  dataType: 'jsonp',
+  success: (collection, response, options) => {
+    console.log(collection.length);
+  }
+});
 
 let collection = new MyCollection([{
     name: 'Marc'
@@ -31,13 +27,13 @@ let collection = new MyCollection([{
 
 const MyCollectionView = Marionette.CollectionView.extend({
   childView: Album,
-  onRender() {
-    testCall();
-  }
 })
 
 let albumsView = new MyCollectionView({
-  collection
+  collection,
+  onRender(){
+
+  }
 });
 
 export default albumsView;
