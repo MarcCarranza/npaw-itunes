@@ -9,31 +9,22 @@ let MyCollection = Backbone.Collection.extend({
   }
 });
 
-let apiCollection = new MyCollection();
-apiCollection.fetch({
+let collection = new MyCollection();
+
+collection.fetch({
   dataType: 'jsonp',
   success: (collection, response, options) => {
-    console.log(collection.length);
+    console.log(collection);
   }
 });
 
-let collection = new MyCollection([{
-    name: 'Marc'
-  },
-  {
-    name: 'Carranza'
-  }
-]);
 
 const MyCollectionView = Marionette.CollectionView.extend({
   childView: Album,
 })
 
 let albumsView = new MyCollectionView({
-  collection,
-  onRender(){
-
-  }
+  collection
 });
 
 export default albumsView;

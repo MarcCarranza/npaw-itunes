@@ -7,7 +7,7 @@ let AlbumView = Marionette.View.extend({
     click: 'test'
   },
   test: function(event){
-    console.log('a');
+    console.log('Clicked an album');
   }
 });
 
