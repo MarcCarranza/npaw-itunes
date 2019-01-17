@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 
 *,
 *::after,
@@ -61,6 +61,11 @@ body{
   background-color: hsl(0, 0%, 90%);
 }
 
+.logo__text {
+  font-size: 2.25rem;
+  font-weight: 100;
+}
+
 /** Search **/
 
 .search {
@@ -74,6 +79,7 @@ body{
   border-radius: 0.35rem;
   border: 1px solid hsl(0, 0%, 40%);
   padding: 0.25rem 0.25rem;
+  width: 15vw;
 }
 
 /** ALBUMS **/
@@ -91,12 +97,21 @@ body{
 
 .album__wrapper {
   margin: 2rem 1rem;
-  width: 13rem;
+  width: 10rem;
   font-weight: 300;
 }
 
-.album__name {
+.album {
+  display: flex;
+  flex-direction: column;
+}
 
+.album__cover {
+  max-width: 10rem;
+}
+
+.album__data {
+  margin-top: 0.55rem;
 }
 
 .album__artist {
