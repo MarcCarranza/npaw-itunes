@@ -14,12 +14,13 @@ let collection = new MyCollection();
 collection.fetch({
   dataType: 'jsonp',
   success: (collection, response, options) => {
-    console.log(collection);
+    console.log('Fetching success!');
   }
 });
 
 
 const MyCollectionView = Marionette.CollectionView.extend({
+  className: 'albums__wrapper',
   childView: Album,
 })
 

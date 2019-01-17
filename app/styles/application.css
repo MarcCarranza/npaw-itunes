@@ -1,25 +1,90 @@
-* {
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body{
+  font-size: 1.6rem;
   box-sizing: border-box;
-  font-family: -apple-system, system, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-#content {
-  width: 480px;
-  margin: 0 auto;
+/** HEADER **/
+.header{
+  background: linear-gradient(to bottom, #e5e5e5 0%,#cccccc 100%);
 }
 
-h1 {
-  margin-bottom: 0.5em;
-  font-size: 5em;
+.header__wrapper{
+  padding: 0 2rem;
+  min-height: 6rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-a {
-  color: #006a86;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
+/** Player **/
+
+.player {
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 
-a:hover {
-  color: #006a86;
-  border-bottom: 1px solid #006a86;
+/** Logo **/
+
+.logo {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 90%);
 }
+
+/** Search **/
+
+.search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+/** ALBUMS **/
+
+.albums {
+  margin: 2rem 2rem;
+}
+
+.albums__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/** Album **/
+
+.album__wrapper {
+  margin: 2rem 0;
+  font-weight: 300;
+}
+
+.album__name {
+
+}
+
+.album__artist {
+  color: hsl(0, 0%, 40%);
+  font-size: 1.4rem;
+}
+
+

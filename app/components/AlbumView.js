@@ -1,7 +1,8 @@
 import Marionette from 'backbone.marionette';
-import template from '../templates/item.jst';
+import template from '../templates/album.jst';
 
 let AlbumView = Marionette.View.extend({
+  className: 'album__wrapper',
   template: template,
   events: {
     click: 'test'
