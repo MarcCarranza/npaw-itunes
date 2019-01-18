@@ -4,7 +4,7 @@ import CollectionView from './Main';
 export default Marionette.Application.extend({
   region: '#app',
   onBeforeStart() {
-    $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
+    $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
       options.crossDomain = {
         crossDomain: true
       };

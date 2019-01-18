@@ -3,7 +3,7 @@ import Marionette from 'backbone.marionette';
 import Album from './AlbumView';
 
 let MyCollection = Backbone.Collection.extend({
-  url: 'https://itunes.apple.com/search?term=jack+johnson&limit=20',
+  url: 'https://itunes.apple.com/search?term=lizard+wizard&limit=20&entity=album&country=es',
   parse: (data) => {
     return data.results;
   }
@@ -19,12 +19,12 @@ collection.fetch({
 });
 
 
-const MyCollectionView = Marionette.CollectionView.extend({
+const AlbumsCollectionView = Marionette.CollectionView.extend({
   className: 'albums__wrapper',
-  childView: Album,
+  childView: Album
 })
 
-let albumsView = new MyCollectionView({
+let albumsView = new AlbumsCollectionView({
   collection
 });
 

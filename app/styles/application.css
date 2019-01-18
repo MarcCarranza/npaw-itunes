@@ -19,50 +19,22 @@ body{
 }
 
 /** HEADER **/
-.header{
-  background: linear-gradient(to bottom, #e5e5e5 0%,#cccccc 100%);
-}
-
 .header__wrapper{
-  padding: 0 4rem;
-  min-height: 6rem;
   display: flex;
   justify-content: space-between;
 }
 
-/** Player **/
+/** Title **/
 
-.player {
-  display: flex;
-  flex: 1;
-  align-items: center;
-}
-
-.player__icon {
-  max-height: 2.25rem;
-  margin: 0rem 0.75rem;
-}
-
-.player__icon-volume {
-  max-height: 2.25rem;
-  margin-left: 5rem;
-}
-
-/** Logo **/
-
-.logo {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid #cccccc;
+.title {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
-  background-color: hsl(0, 0%, 90%);
 }
 
-.logo__text {
-  font-size: 2.25rem;
+.title__text {
+  font-size: 5rem;
   font-weight: 100;
 }
 
