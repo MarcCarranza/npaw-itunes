@@ -5,10 +5,7 @@ let SearchBarView = Marionette.View.extend({
   className: 'searchBar',
   template: template,
   triggers: {
-    'click #search__button': 'testChild'
-  },
-  getSearchValue: () => {
-    console.log($('#search__input')[0].value);
+    'click #search__button': 'searchClick'
   }
 });
 
