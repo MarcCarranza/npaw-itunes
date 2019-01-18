@@ -2,12 +2,11 @@
 	<img class="album__cover" src="<%- artworkUrl100 %>"/>
 	<div class="album__data">
 		<p class='album__name'>
-			<% 
-				collectionName = collectionName.substring(0, 16) + '...';
-				%>
+			<% 	if (collectionName.length > 16) collectionName = collectionName.substring(0, 16) + '...'; %>
 			<%- collectionName %>
 		</p>
 		<p class='album__artist'>
+			<% if (artistName.length > 16) artistName = artistName.substring(0, 14) + '...'; %>
 			<%- artistName %>
 		</p>
 	</div>
