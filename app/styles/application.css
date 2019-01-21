@@ -134,11 +134,6 @@ body{
   align-items: center;
 }
 
-@keyframes test {
-  0% { opacity: 0 }
-  100% {opacity: 1 }
-}
-
 .albums__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -155,10 +150,18 @@ body{
 }
 
 .album {
+  opacity: 0;
   display: flex;
   flex-direction: column;
-  animation-name: test;
+  animation-name: fadeToAlbum;
   animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeToAlbum {
+  0% { opacity: 0 }
+  100% {opacity: 1 }
 }
 
 .album__cover {
