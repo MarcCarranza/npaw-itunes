@@ -21,15 +21,18 @@ body{
 }
 
 /** HEADER **/
+
 .header__wrapper{
   padding: 3rem 0;
   transition: all 0.3s;
   min-height: 20rem;
+  margin-top: 20vh;
 }
 
 .header__wrapper-searched{
   padding: 1.6rem 0;
   min-height: 5rem;
+  margin: 0;
 }
 
 /** Title **/

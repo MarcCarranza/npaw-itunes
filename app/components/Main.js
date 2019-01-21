@@ -39,9 +39,9 @@ let MyView = Mn.View.extend({
     this.firstSearchChangeStyle(); 
   },
   firstSearchChangeStyle: () => {
+    $('.header__wrapper').addClass('header__wrapper-searched');
     $('.title__text').addClass('title__text-small');
     $('.title__subtitle').addClass('title__subtitle-hide');
-    $('.header__wrapper').addClass('header__wrapper-searched');
   },
   onBeforeRender() {
     this.collection = this.callCollection('frank+ocean');
