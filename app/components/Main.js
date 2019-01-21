@@ -6,6 +6,7 @@ import Albums from './AlbumsCollection';
 
 let MyView = Mn.View.extend({
   el: '#container',
+  page: 1,
   template: false,
   collection: [],
   regions: {
@@ -23,7 +24,7 @@ let MyView = Mn.View.extend({
   },
   callCollection: function(searchTerm) {
     let MyCollection = Bb.Collection.extend({
-      url: 'https://itunes.apple.com/search?term=' + searchTerm + '&limit=40&entity=album&country=es',
+      url: 'https://itunes.apple.com/search?term=' + searchTerm + '&limit=65&entity=album&country=es',
       parse: (data) => {
         return data.results;
       }
@@ -43,13 +44,15 @@ let MyView = Mn.View.extend({
   calculateCollectionPages: function(){
     let albumsCollection = this.collection;
     let i = albumsCollection.length;
+    console.log(i/20);
+    console.log(i%20);
     while( i > 19){
       albumsCollection.remove(albumsCollection.models[i]);
       i--;
     }
-    this.setAlbumView(albumsCollection);
+    this.setAlbumsView(albumsCollection);
   },
-  setAlbumView: function(collection){
+  setAlbumsView: function(collection){
     this.showChildView('albums', new Albums({collection}));
   },
   getSearchTerm: function(childView) {

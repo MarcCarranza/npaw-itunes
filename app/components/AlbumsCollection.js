@@ -1,5 +1,5 @@
 import Marionette from 'backbone.marionette';
-import Album from './AlbumView';
+import Album from './AlbumGridView';
 
 const AlbumsCollectionView = Marionette.CollectionView.extend({
   className: 'albums__wrapper',
