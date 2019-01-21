@@ -16,9 +16,28 @@ let MyView = Mn.View.extend({
   childViewEvents: {
     'searchClick': 'getSearchTerm'
   },
+  // createCollection: function(){
+  //   let MyCollection = Bb.Collection.extend({
+  //     url: 'https://itunes.apple.com/search?term=Frank+Ocean&limit=40&entity=album&country=es',
+  //     parse: (data) => {
+  //       return data.results;
+  //     }
+  //   });
+  //   let collection = new MyCollection();
+  //   collection = this.callCollectionv2(collection);
+  // },
+  // callCollectionv2: function(coll){
+  //   coll.fetch({
+  //     async: false,
+  //     dataType: 'jsonp',
+  //     success: (collection, response, options) => {
+  //       return collection;
+  //     }
+  //   }).then(console.log(coll));
+  // },
   callCollection: function(searchTerm) {
     let MyCollection = Bb.Collection.extend({
-      url: 'https://itunes.apple.com/search?term=' + searchTerm + '&limit=20&entity=album&country=es',
+      url: 'https://itunes.apple.com/search?term=' + searchTerm + '&limit=40&entity=album&country=es',
       parse: (data) => {
         return data.results;
       }
@@ -27,24 +46,19 @@ let MyView = Mn.View.extend({
     collection.fetch({
       dataType: 'jsonp',
       success: (collection, response, options) => {
-        return collection;
+        this.showChildView('albums', new Albums({collection}));
       }
-    }); 
-    return collection; 
+    })
   },
   getSearchTerm: function(childView) {
     let searchTerm = childView.$el[0].children[0].value;
     let collection = this.callCollection(searchTerm);
-    this.showChildView('albums', new Albums({collection}));
     this.firstSearchChangeStyle(); 
   },
   firstSearchChangeStyle: () => {
     $('.header__wrapper').addClass('header__wrapper-searched');
     $('.title__text').addClass('title__text-small');
     $('.title__subtitle').addClass('title__subtitle-hide');
-  },
-  onBeforeRender() {
-    this.collection = this.callCollection('frank+ocean');
   },
   onRender() {
     this.showChildView('header', Header);
