@@ -63,6 +63,7 @@ body{
   bottom: 0;
   transform: translateX(-50%);
   color:#586e75;
+  text-align: center;
 }
 
 .title__subtitle-hide{
@@ -165,3 +166,26 @@ body{
 }
 
 
+/*** MOBILE ***/
+
+@media(max-width: 800px){
+  .header__wrapper{
+    min-height: 10rem;
+  }
+  .header__wrapper-searched{
+    min-height: 2rem;
+  }
+  .title__text{
+    font-size: 6rem;
+  }
+
+  .title__text-small{
+    font-size: 1.6rem;
+    padding-left: 2.5rem;
+  }
+
+  .title__subtitle{
+    font-size: 3rem;
+    width: 100%;
+  }
+}
