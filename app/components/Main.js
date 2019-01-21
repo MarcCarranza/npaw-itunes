@@ -35,16 +35,20 @@ let MyView = Mn.View.extend({
   getSearchTerm: function(childView) {
     let searchTerm = childView.$el[0].children[0].value;
     let collection = this.callCollection(searchTerm);
-    this.showChildView('albums', new Albums({collection})); 
+    this.showChildView('albums', new Albums({collection}));
+    this.firstSearchChangeStyle(); 
+  },
+  firstSearchChangeStyle: () => {
+    $('.title__text').addClass('title__text-small');
+    $('.title__subtitle').addClass('title__subtitle-hide');
+    $('.header__wrapper').addClass('header__wrapper-searched');
   },
   onBeforeRender() {
     this.collection = this.callCollection('frank+ocean');
   },
   onRender() {
-    let collection = this.collection;
     this.showChildView('header', Header);
-    this.showChildView('searchbar', SearchBar);
-    this.showChildView('albums', new Albums({collection})); 
+    this.showChildView('searchbar', SearchBar); 
   }
 });
 
