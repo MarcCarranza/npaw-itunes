@@ -155,7 +155,6 @@ body{
   flex-direction: column;
   animation-name: fadeToAlbum;
   animation-duration: 1s;
-  animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
 
