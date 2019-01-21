@@ -46,10 +46,14 @@ let MyView = Mn.View.extend({
     collection.fetch({
       dataType: 'jsonp',
       success: (collection, response, options) => {
-        console.log(collection.slice(20, collection.length));
+        this.setCollection(collection);
         this.showChildView('albums', new Albums({collection}));
       }
     })
+  },
+  setCollection: function(collection){
+    this.collection = collection;
+    console.log(collection);
   },
   getSearchTerm: function(childView) {
     let searchTerm = childView.$el[0].children[0].value;
