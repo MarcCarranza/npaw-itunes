@@ -6,6 +6,16 @@ let SearchBarView = Marionette.View.extend({
   template: template,
   triggers: {
     'click #searchbar__button': 'searchClick'
+  },
+  detectEnter: function(view) {
+    $(document).on('keypress',function(e) {
+      if (e.which === 13) {
+        view.triggerMethod('searchClick', view);
+      }
+    });
+  },  
+  onRender() {
+    this.detectEnter(this);
   }
 });
 
