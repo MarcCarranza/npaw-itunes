@@ -69,11 +69,8 @@ let MyView = Mn.View.extend({
     let MyCollection = Bb.Collection.extend();
     let albumsCollection;
     let lastAlbum = 20 * this.page;
-    if (this.page === 1) { 
-      albumsCollection = new MyCollection(this.collection.slice(0, lastAlbum));
-    } else {
-      albumsCollection = new MyCollection(this.collection.slice(20 * (this.page - 1), lastAlbum));
-    }
+    let firstAlbum = lastAlbum - 20;
+    albumsCollection = new MyCollection(this.collection.slice(firstAlbum, lastAlbum));
     this.setAlbumsView(albumsCollection);
   },
   getPageClick: function() {

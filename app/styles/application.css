@@ -143,13 +143,12 @@ body{
 
 /** Album **/
 
-.album__wrapper {
+/* GRID */
+
+.album {
   margin: 2rem 1rem;
   width: 10rem;
   font-weight: 300;
-}
-
-.album {
   opacity: 0;
   display: flex;
   flex-direction: column;
@@ -177,18 +176,47 @@ body{
   font-size: 1.4rem;
 }
 
+/* LIST */
+
+.album-list {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  width: 50rem;
+  margin: 1rem 0rem;
+  animation-name: fadeToAlbum;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  margin-left: 25rem;
+}
+
+.album-list__data{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}
+
+.album-list__artist {
+  color: #9c27b0;
+  font-size: 1.6rem;
+}
+
 /** Pages **/
 
 .pages {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .page__link {
   text-decoration: none;
   color: hsl(0, 0%, 10%);
+  font-size: 2rem;
+  margin: 0 1rem;
 }
 
 .page__link-active {
