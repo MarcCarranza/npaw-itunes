@@ -177,6 +177,25 @@ body{
   font-size: 1.4rem;
 }
 
+/** Pages **/
+
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.page__link {
+  text-decoration: none;
+  color: hsl(0, 0%, 10%);
+}
+
+.page__link-active {
+  color: #9c27b0;
+  font-weight: 700;
+}
+
 
 /*** MOBILE ***/
 

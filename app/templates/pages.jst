@@ -1,0 +1,7 @@
+<% pagesArray.forEach(function(page, index) {
+    if (index === 0){ %>
+        <a href='' class='page__link page__link-active'><%- page %></a>
+    <%} else { %>
+        <a href='' class='page__link'><%- page %></a>
+    <% }
+}); %>
