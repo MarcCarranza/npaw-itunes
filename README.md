@@ -18,3 +18,4 @@ Debido a la rapidez con la que he tenido que hacerlo, algunas soluciones no han 
 si tenéis alguna duda o pregunta estaré encantado de responderla.
 
 ###### Actualizaré este Readme cuando vuelva, espero que os guste esta prueba técnica y gracias por la oportunidad.
+###### P.D. https://github.com/MarcCarranza/atrapalo-paint está basado en React y tal vez sea de vuestro interés.
