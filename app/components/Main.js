@@ -36,6 +36,9 @@ let MyView = Mn.View.extend({
       success: (collection, response, options) => {
         this.setCollection(collection);
         this.calculateCollectionPages();
+      },
+      error: (response, options) => {
+        console.log('The fetching has failed, it could be due to the API not working or invalid characters');
       }
     })
   },
