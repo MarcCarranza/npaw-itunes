@@ -187,7 +187,7 @@ body{
   animation-name: fadeToAlbum;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  margin-left: 25rem;
+  margin-left: 15rem;
 }
 
 .album-list__data{
