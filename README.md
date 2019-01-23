@@ -7,7 +7,7 @@ Para comprobar que funciona ejecuta los siguientes comandos:
 ```
 git clone https://github.com/marccarranza/npaw-itunes
 cd npaw-itunes
-npm i
+npm install
 npm start
 ```
 
